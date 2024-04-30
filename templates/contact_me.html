@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>contact me</title>
+
+{% endblock %}
+
+{% block body %}
+
+<div class="card my-3 mx-3">
+    <div class="card-header">
+        {{data.Head}}
+    </div>
+    <div class="card-body">
+        <div class="mb-3">
+            Name : {{data.Name}}
+            <br>
+            Email : {{data.Email}}
+        </div>
+        <div>
+            {{data.Last}}
+        </div>
+    </div>
+</div>
+{% endblock %}

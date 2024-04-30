@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Main Page</title>
+
+{% endblock %}
+
+{% block body %}
+
+<div class="card my-3 mx-3">
+    <div class="card-header">
+        Stories
+    </div>
+    <div class="card-body">
+        {% if context|length > 0 %}
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Story</th>
+                </tr>
+            </thead>
+            {% for line in context %}
+                <tbody>
+                    <tr>
+                        <td>{{line.name}}</td>
+                        <td>{{line.story}}</td>
+                    </tr>
+                </tbody>
+            {% endfor %}
+        </table>
+        {% else %}
+
+        <p>No Story To Show</p>
+
+        {% endif %}
+
+    </div>
+</div>
+
+{% endblock %}
